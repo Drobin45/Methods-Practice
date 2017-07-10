@@ -10,7 +10,7 @@ namespace Methods_Practice
     {
         static void Main(string[] args)
         {
-
+            //Notes One
             //Methods are a tool for us to create reusable pieces of code.
             //Methods are a way of us collecting a series of instructions and then call...
             //...them when we need them.
@@ -18,6 +18,8 @@ namespace Methods_Practice
             //This means a method will NEVER be created inside another method or member of the class.
             // However, methods are frequently CALLED inside of another class or method.  
 
+
+            //Example one
             //Console.WriteLine("Hello. Please enter the first nuimber to be added.");
             //int numberOne = int.Parse(Console.ReadLine());
             //Console.WriteLine("Please enter the second number to be added.");
@@ -26,20 +28,41 @@ namespace Methods_Practice
             //int answer = Add(numberOne, numberTwo);
             //Console.WriteLine("The sum of your numbers is " + answer);
 
+            //----------------------------------------------------------------------
+
+            //Examples two and three
             //RobotWarning("Will Robinson");
 
-            string myBirthMonth = "September";
-            string myFriendBirthMonth = "December";
-            string myVehicle = Vehicle(myBirthMonth);
-            string myFriendVehicle = Vehicle(myFriendBirthMonth);
+            //string myBirthMonth = "September";
+            //string myFriendBirthMonth = "December";
+            //string myVehicle = Vehicle(myBirthMonth);
+            //string myFriendVehicle = Vehicle(myFriendBirthMonth);
 
-            Console.WriteLine("My future vehicle is {0} and Jordan's future vehicle {1}.", myVehicle, myFriendVehicle);
+            //Console.WriteLine("My future vehicle is {0} and Jordan's future vehicle {1}.", myVehicle, myFriendVehicle);
+
+            //-----------------------------------------------------------------------
+            //Example Three
+            double hoursWorked = 42.3d;
+            double hourlyWage = 12.50d;
+
+            Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
 
 
+            //-----------------------------------------------------------------------
+                                            //Practice One
 
+            //string myName = "Daniel";
+            //string myFood = "Pizza";
+            //FavoriteFood(myName, myFood);
+
+            //----------------------------------------------------------------------
+                                            //Practice Two
+
+            //int myAge = 35;
+            //RetirementCalculator(myAge);
 
         }
-                
+                                            //Notes Two     
         //"public" is an access modifier, methods always have these.
             //Specifically, "Public" allows entire system to use the following method (Below AND Above it, I believe)
         // The first int is a "Return Type"
@@ -86,5 +109,44 @@ namespace Methods_Practice
             }
             return vehicleFortune;
         }
+
+        //Practice One
+        //Create a method called FavoriteFood
+        //It should take two string parameters. One representing a name, and the other representing...
+        // ... a favorite food.
+        // The return type should be void
+        //The method should concatenate
+        //Complete
+
+
+        public static void  FavoriteFood(string name, string food)
+        {
+
+            Console.WriteLine("Because your name is " + name + ",your favorite food is " + food);
+        }
+
+        //Practice Two
+        //Create a method called RetirementCalculator
+        //It should take an int as a parameter representing the user's age
+        //The method should calculate how many more years until the user retires using 65 as the...
+        // ... age of retirement.
+        // The return type should be void
+        //Once it calculated the user's retirement age it should print
+        // "The user will retire in X years" where X represents the value that was calculated."
+        //Complete
+
+        public static void RetirementCalculator (int userAge)
+        {
+            int calculate = 65 - userAge;
+            Console.WriteLine("You will retire in " + calculate + " years." );
+        }
+
+        public static double WageCalculator(double hoursWorkedWeekly, double hourlyWage)
+        {
+            //This method should calulate the monthly wage
+            double monthlyWage = ((hoursWorkedWeekly * 52) * hourlyWage) / 12;
+            return monthlyWage;            
+        }
+
     }
 }
