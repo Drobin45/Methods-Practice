@@ -42,26 +42,57 @@ namespace Methods_Practice
 
             //-----------------------------------------------------------------------
             //Example Three
-            double hoursWorked = 42.3d;
-            double hourlyWage = 12.50d;
+            //double hoursWorked = 42.3d;
+            //double hourlyWage = 12.50d;
 
-            Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
+            //Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
+
+            //Method used for this example
+            //    public static double WageCalculator(double hoursWorkedWeekly, double hourlyWage)
+            //{
+            //    //This method should calulate the monthly wage
+            //    double monthlyWage = ((hoursWorkedWeekly * 52) * hourlyWage) / 12;
+            //    return monthlyWage;
+            //}
 
 
             //-----------------------------------------------------------------------
-                                            //Practice One
+            //Practice One
 
             //string myName = "Daniel";
             //string myFood = "Pizza";
             //FavoriteFood(myName, myFood);
 
             //----------------------------------------------------------------------
-                                            //Practice Two
+            //Practice Two
 
             //int myAge = 35;
             //RetirementCalculator(myAge);
 
-        }
+            //-------------------------------------------------------------------------------
+            //Practice three        
+
+            //Create two methods of your choosing. At least one of the methods should have a non-void...
+            //... return type.
+            //Both of the methods should take at least one parameter.
+            //Remember, when naming your method that it should represent what your method does
+            //Your method should only aim to accomplish one thing. 
+            // To be continued....
+
+            //double mangoes = 1;
+            //double moneyLeft = 999.98d;
+            //Console.WriteLine("You can buy {0} mangoes", )
+
+            //Method for practice three, problem one
+        //public static void SnackMoney(double moneyLeft, double costOfSnacks)
+        //{
+        //    double numberOfSnacks = (moneyLeft / costOfSnacks);
+        //}
+
+
+
+
+    } //All below this are methods
                                             //Notes Two     
         //"public" is an access modifier, methods always have these.
             //Specifically, "Public" allows entire system to use the following method (Below AND Above it, I believe)
@@ -146,6 +177,14 @@ namespace Methods_Practice
             //This method should calulate the monthly wage
             double monthlyWage = ((hoursWorkedWeekly * 52) * hourlyWage) / 12;
             return monthlyWage;            
+        }
+
+        //Practice Three Method
+
+        public static double SnackMoney(double moneyLeft, double costOfSnacks)
+        {
+            double numberOfSnacks = (moneyLeft / costOfSnacks);
+            return numberOfSnacks;          
         }
 
     }
